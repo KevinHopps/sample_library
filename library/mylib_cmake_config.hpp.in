@@ -1,0 +1,2 @@
+#cmakedefine MYLIB_VERSION_MAJOR @mylib_VERSION_MAJOR@
+#cmakedefine MYLIB_VERSION_MINOR @mylib_VERSION_MINOR@
