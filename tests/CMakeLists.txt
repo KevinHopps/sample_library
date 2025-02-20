@@ -16,12 +16,13 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-target_include_directories(virtual_memory PUBLIC include)
+target_include_directories(mylib PUBLIC include)
+target_include_directories(mylib PUBLIC ${CMAKE_BINARY_DIR})
 
 file(GLOB SOURCES
     src/*.[ch]pp
     )
     
-add_executable(virtual_memory_test ${SOURCES})
+add_executable(mylib_test ${SOURCES})
 
-target_link_libraries(virtual_memory_test virtual_memory gtest_main)
+target_link_libraries(mylib_test mylib gtest_main)
